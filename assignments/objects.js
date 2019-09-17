@@ -89,18 +89,25 @@ const parent = {
 		return this.name;
 	},
 
-	const child = {
-	  name: 'George'
-	  age: 50,
+	child : {
+		name       : 'George',
+		age        : 50,
+		speak      : function() {
+			return this.name;
+		},
 
-	  const grandchild = {
-	    name: 'Sam',
-	    age: 30,
-	  }
-	}
+		grandchild : {
+			name  : 'Sam',
+			age   : 30,
+			speak : function() {
+				return this.age;
+			},
+		},
+	},
 };
 console.log(parent.name);
-console.log(child.age);
+console.log(parent.child.name);
+console.log(parent.child.grandchild.age);
 // Log the parent object's name
 
 // Log the child's age
